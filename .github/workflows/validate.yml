@@ -1,0 +1,29 @@
+name: Validate repository
+
+on:
+  push:
+    branches: [ main, assistant/** ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print runner info and list top-level files
+        run: |
+          echo "Runner OS:"
+          uname -a || echo "uname not available"
+          echo ""
+          echo "Top-level files:"
+          ls -la
+
+      - name: Show Node / Python versions (if present)
+        run: |
+          echo "Node version (if installed):"
+          node --version || echo "node not found"
+          echo "Python version:"
+          python --version || echo "python not found"
