@@ -1,0 +1,7 @@
+# Example environment variables (placeholders)
+DATABASE_URL=
+API_KEY=
+SECRET_KEY=
+PORT=3000
+
+# Note: do NOT commit real secrets. Copy this file to `.env` and fill values locally.
