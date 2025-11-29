@@ -8,12 +8,12 @@ Welcome to **foodlands.app**! This guide will help you get started with local de
 
 Before you begin, ensure you have the following installed:
 
-- **Git** - [Download](https://git-scm.com/downloads)
+- **Git** - https://git-scm.com/downloads
 - A code editor (e.g., VS Code, IntelliJ, Vim)
 - One of the following runtime environments based on your stack:
-  - **Node.js** (v18+) and npm - [Download](https://nodejs.org/)
-  - **Python** (3.9+) - [Download](https://python.org/)
-  - **Flutter** (3.0+) - [Install Guide](https://flutter.dev/docs/get-started/install)
+  - **Node.js** (v18+) and npm - https://nodejs.org/
+  - **Python** (3.9+) - https://python.org/
+  - **Flutter** (3.0+) - https://flutter.dev/docs/get-started/install
 
 ### Clone the Repository
 
