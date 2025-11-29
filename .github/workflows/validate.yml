@@ -1,10 +1,10 @@
-name: Validate
+name: Validate repository
 
 on:
   push:
-    branches: [main]
+    branches: [ main, 'assistant/**', 'copilot/**' ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -16,12 +16,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Print environment info
+      - name: Print runner info and list top-level files
         run: |
-          echo "=== Environment Info ==="
           echo "Runner OS: $RUNNER_OS"
           echo "Runner Arch: $RUNNER_ARCH"
           echo "Workspace: $GITHUB_WORKSPACE"
+          uname -a || echo "uname not available"
           echo ""
-          echo "=== Top-level files ==="
+          echo "Top-level files:"
           ls -la
+
+      - name: Show Node / Python versions (if present)
+        run: |
+          echo "Node version (if installed):"
+          node --version || echo "node not found"
+          echo ""
+          echo "Python version:"
+          python --version || echo "python not found"
