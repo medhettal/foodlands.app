@@ -1,65 +1,126 @@
 # foodlands.app
 
-Short on-ramp checklist to get the project running locally.
+Welcome to **foodlands.app**! This guide will help you get started with local development.
 
-## Prerequisites
-- Git installed
-- One of the language runtimes below depending on which part of the repo you use:
-  - Node.js (LTS) and npm / yarn
-  - Python 3.8+ and virtualenv / venv
-  - Flutter SDK (stable) for mobile clients
+## Getting Started
 
-## Quick setup (general)
-1. Clone repository
-   - git clone git@github.com:medhettal/foodlands.app.git
-   - cd foodlands.app
-2. Create a local env file from the example:
-   - cp .env.example .env
-   - Fill in values in `.env` (do NOT commit secrets)
+### Prerequisites
 
-## Node (if the project contains Node code)
-- Install dependencies:
-  - npm install
-  or
-  - yarn install
-- Run locally:
-  - npm start
-- Build:
-  - npm run build
-- Tests:
-  - npm test
-- Lint:
-  - npm run lint
+Before you begin, ensure you have the following installed:
 
-## Python (if applicable)
-- Create venv and install:
-  - python -m venv .venv
-  - source .venv/bin/activate  # macOS / Linux
-  - .venv\Scripts\activate     # Windows (PowerShell)
-  - pip install -r requirements.txt
-- Run:
-  - python -m your_module
-- Tests:
-  - pytest
+- **Git** - https://git-scm.com/downloads
+- A code editor (e.g., VS Code, IntelliJ, Vim)
+- One of the following runtime environments based on your stack:
+  - **Node.js** (v18+) and npm - https://nodejs.org/
+  - **Python** (3.9+) - https://python.org/
+  - **Flutter** (3.0+) - https://flutter.dev/docs/get-started/install
 
-## Flutter (if applicable)
-- Install Flutter SDK: https://flutter.dev/docs/get-started/install
-- Get packages:
-  - flutter pub get
-- Run (simulator / device):
-  - flutter run
-- Build:
-  - flutter build apk
-- Tests:
-  - flutter test
+### Clone the Repository
 
-## Environment variables
-- Use `.env.example` as a template. DO NOT commit real secrets to the repository. Use CI secrets or a secrets manager for production keys.
+```bash
+git clone https://github.com/medhettal/foodlands.app.git
+cd foodlands.app
+```
 
-## Next steps (suggested)
-- Identify the primary language / runtime used in this repo and add a focused "Getting started" section.
-- Add a more specific CI workflow (install, build, test) once the main stack is known.
-- Add contributor / code-style guidelines, and a troubleshooting section.
+### Environment Setup
 
-## Contacts
-- Repo owner: @medhettal
+1. Copy the example environment file:
+   ```bash
+   cp .env.example .env
+   ```
+2. Edit `.env` and fill in the required values.
+
+> **Important:** Never commit your `.env` file. It contains sensitive data.
+
+---
+
+## Stack-Specific Setup
+
+### Node.js / npm
+
+```bash
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Run tests
+npm test
+
+# Run linter
+npm run lint
+```
+
+### Python / venv
+
+```bash
+# Create a virtual environment
+python -m venv .venv
+
+# Activate the virtual environment
+# On macOS/Linux:
+source .venv/bin/activate
+# On Windows:
+.venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
+python main.py
+
+# Run tests
+pytest
+
+# Run linter
+flake8
+```
+
+### Flutter
+
+```bash
+# Get dependencies
+flutter pub get
+
+# Run the app in debug mode
+flutter run
+
+# Build for release
+flutter build apk   # Android
+flutter build ios   # iOS
+
+# Run tests
+flutter test
+
+# Analyze code
+flutter analyze
+```
+
+---
+
+## Next Steps
+
+- [ ] Choose a tech stack and set up your development environment
+- [ ] Review the project structure and existing code
+- [ ] Run tests to ensure everything works: see stack-specific commands above
+- [ ] Check for open issues or tasks to contribute
+- [ ] Set up your editor/IDE with recommended extensions
+
+---
+
+## Contributing
+
+1. Create a new branch for your feature or fix
+2. Make your changes
+3. Run tests and linting before committing
+4. Submit a pull request
+
+---
+
+## License
+
+See [LICENSE](./LICENSE) for details.
