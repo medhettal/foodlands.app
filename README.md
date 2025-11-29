@@ -123,5 +123,3 @@ dart format --set-exit-if-changed .
 - [ ] Set up CI/CD pipeline with language-specific build and test steps
 - [ ] Add comprehensive test coverage
 - [ ] Configure deployment environment
-
-To run tests locally, see the [Testing](#testing) section above.
